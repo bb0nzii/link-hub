@@ -1,0 +1,264 @@
+@import url("https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.css");
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+
+body {
+  background-color: var(--color-bg-base);
+  font-family: "Pretendard", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-title {
+  font-size: var(--font-size-2xl);
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-weight-bold);
+}
+
+.text-subtitle {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-semibold);
+}
+
+.text-base {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-regular);
+}
+
+.text-label {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-thin);
+}
+
+.text-caption {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-weight-light);
+}
+
+:root {
+  /* Brand */
+  --color-brand-primary: #035900;
+  --color-brand-primary-rgb: 3, 89, 0;
+  /* Background */
+  --color-bg-base: #FFFCF9;
+  --color-bg-section: #FFF5E9;
+  /* Text */
+  --color-text-primary: #030509;
+  --color-text-muted: #595959;
+  --color-text-inverse: #FFFCF9;
+  --color-text-inverse-muted: #FFF5E9;
+  /* Accent */
+  --color-accent-sub: #359000;
+  /* Font size */
+  --font-size-2xl: 3rem; /* page title */
+  --font-size-xl: 2.4rem; /* section title */
+  --font-size-lg: 2rem; /* subtitle */
+  --font-size-md: 1.2rem; /* body, label */
+  --font-size-sm: 1rem; /* caption */
+  --font-size-xsm: 0.8rem;
+  /* Line height */
+  --line-height-tight: 1.2;
+  --line-height-base: 1.5;
+  --line-height-relaxed: 1.7;
+  /* Font weight */
+  --font-weight-black: 900;
+  --font-weight-extrabold: 800;
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+  --font-weight-light: 300;
+  --font-weight-thin: 100;
+  --space-1: 0.4rem;
+  --space-2: 0.8rem;
+  --space-3: 1.2rem;
+  --space-4: 1.6rem;
+  --space-5: 2.4rem;
+  --space-6: 3.2rem;
+  --space-7: 4.8rem;
+  --container-width: 600px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-2xl: 2.4rem;
+    --font-size-xl: 1.9rem;
+    --font-size-lg: 1.6rem;
+    --font-size-md: 1.1rem;
+    --font-size-sm: 0.9rem;
+    --space-1: 0.2rem;
+    --space-2: 0.6rem;
+    --space-3: 1rem;
+    --space-4: 1.4rem;
+    --space-5: 2.0rem;
+    --space-6: 2.4rem;
+    --space-7: 3.2rem;
+  }
+}
+@media (max-width: 430px) {
+  :root {
+    --font-size-2xl: 2rem;
+    --font-size-xl: 1.6rem;
+    --font-size-lg: 1.3rem;
+    --font-size-md: 0.9rem;
+    --font-size-sm: 0.8rem;
+    --font-size-xsm: 0.7rem;
+    --space-3: 0.8rem;
+    --space-4: 1.2rem;
+    --space-5: 1.8rem;
+    --space-6: 2.2rem;
+    --space-7: 3rem;
+  }
+}
+.page {
+  position: relative;
+  padding-top: var(--space-8);
+}
+
+.linkhub {
+  min-height: 100vh;
+  background: var(--color-brand-primary);
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.linkhub__container {
+  width: 100%;
+  max-width: var(--container-width);
+}
+
+.linkhub__card {
+  background: var(--color-bg-base);
+  border-radius: 32px 32px 0 0;
+  overflow: hidden;
+}
+
+/* ---------------- header ---------------- */
+.linkhub__header {
+  text-align: center;
+  padding: var(--space-7) var(--space-6);
+}
+
+.logo {
+  width: 120px;
+  margin: 0 auto var(--space-5);
+}
+
+.logo img {
+  width: 100%;
+}
+
+.description {
+  margin-top: var(--space-4);
+  color: var(--color-text-muted);
+}
+
+/* ---------------- tabs ---------------- */
+.linkhub__tabs {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+
+.tab-btn {
+  padding: var(--space-2) var(--space-5);
+  border-radius: 40px;
+  background: white;
+  font-size: var(--font-size-md);
+  transition: 0.2s;
+}
+
+.tab-btn.active {
+  background: var(--color-brand-primary);
+  color: white;
+}
+
+/* ---------------- links ---------------- */
+.linkhub__links {
+  padding: var(--space-6);
+  background: var(--color-bg-section);
+}
+
+.link-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  margin-bottom: var(--space-4);
+  background: white;
+  border-radius: 40px;
+  transition: 0.2s;
+}
+
+.link-item:hover {
+  transform: translateY(-3px);
+}
+
+.link-item__icon {
+  width: 40px;
+  height: 40px;
+  background: var(--color-brand-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* ---------------- guestbook ---------------- */
+.linkhub__guestbook {
+  padding: var(--space-6);
+  text-align: center;
+}
+
+/* ---------------- footer ---------------- */
+.linkhub__footer {
+  text-align: center;
+  padding: var(--space-6) var(--space-6);
+}
+
+.copyright {
+  margin-top: var(--space-3);
+}
+
+/* ---------------- mobile ---------------- */
+@media (max-width: 768px) {
+  .linkhub {
+    background: none;
+  }
+  .linkhub__card {
+    border-radius: 0;
+    min-height: 100vh;
+  }
+}/*# sourceMappingURL=style.css.map */
