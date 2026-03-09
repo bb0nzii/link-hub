@@ -123,6 +123,7 @@ onMounted(async ()=>{
 
 <style scoped>
 .guestbook {
-    padding: var(--space-4) 0;
+    padding: 0 0 var(--space-4) 0;
+    margin-bottom: var(--space-2);
 }
 </style>

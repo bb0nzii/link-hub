@@ -1,6 +1,6 @@
 .guestbook__title {
   margin-bottom: var(--space-1);
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: var(--font-weight-semibold);
 }
 
@@ -14,6 +14,7 @@
 
 .guestbook__list {
   padding: var(--space-4);
+  margin-bottom: var(--space-4);
   background-color: var(--color-bg-section);
 
   display: grid;
@@ -26,4 +27,12 @@
 
   border-radius: var(--border-radious-m);
   box-shadow:0 2px 4px rgba(0,0,0,0.25);
+}
+
+
+
+@media screen and (max-width: 430px){
+  .guestbook__title {
+    font-size: 1.25rem;
+  }
 }

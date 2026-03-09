@@ -36,7 +36,7 @@ const submit = () => {
 
   <v-row no-gutters class="form-row">
 
-    <v-col cols="4">
+    <v-col cols="3">
       <v-text-field
         label="작성자"
         variant="outlined"
@@ -45,7 +45,7 @@ const submit = () => {
       />
     </v-col>
 
-    <v-col cols="6">
+    <v-col cols="7">
       <v-text-field
         label="제목"
         variant="outlined"
@@ -68,7 +68,7 @@ const submit = () => {
 
 
   <v-textarea
-    label="방명록 작성 시 수정 및 삭제할 수 없습니다. 등록하기 전에 꼬옥 확인하기 >.0"
+    label="방명록 등록 시 수정 및 삭제는 저만 할 수 있어요. 등록 전 꼬옥 확인하기 >.0"
     variant="outlined"
     v-model="content"
     rows="4"
