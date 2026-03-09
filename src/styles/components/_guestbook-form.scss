@@ -1,0 +1,17 @@
+.guestbook__form {
+  border-radius: 0;
+  box-shadow: none;
+
+  padding: var(--space-4);
+}
+
+.form-row {
+    margin-bottom: var(--space-2);
+}
+
+.form-button {
+    height: 100%;
+    box-shadow: none;
+    background-color: var(--color-brand-primary);
+    color: var(--color-text-inverse);
+}

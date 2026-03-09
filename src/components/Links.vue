@@ -1,8 +1,6 @@
 <script setup>
 
-import { ref } from "vue"
-
-const activeTab = ref("links")
+import LinkItem from "@/components/LinkItem.vue"
 
 const links = [
   {
@@ -23,21 +21,29 @@ const links = [
   {
     name: "Instagram 바로가기",
     icon: "mdi-instagram",
-    url: "#"
+    url: "https://www.instagram.com/poplar159/"
   },
   {
     name: "Blog 바로가기",
     icon: "mdi-post-outline",
-    url: "#"
+    url: "https://blog.naver.com/poplar159"
   }
 ]
 
 </script>
 
+<template>
 
-<!-- Links -->
-<templete>
+<section class="linkhub__links">
 
+  <LinkItem
+    v-for="link in links"
+    :key="link.name"
+    :name="link.name"
+    :icon="link.icon"
+    :url="link.url"
+  />
 
+</section>
 
-</templete>
+</template>

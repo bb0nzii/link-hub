@@ -3,4 +3,12 @@
 @use "base/typography";
 @use "base/variables";
 
-@use "components/linkhub";
+@use "pages/linkhub";
+
+@use "components/link";
+@use "components/tabs";
+@use "components/guestbook-form";
+@use "components/guestbook-list";
+
+@use "layout/header";
+@use "layout/footer";

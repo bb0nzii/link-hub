@@ -1,19 +1,16 @@
 :root {
-    /* Brand */
+    /* Color */
     --color-brand-primary: #035900;
     --color-brand-primary-rgb: 3, 89, 0;
 
-    /* Background */
     --color-bg-base: #FFFCF9;
     --color-bg-section: #FFF5E9;
 
-    /* Text */
     --color-text-primary: #030509;
     --color-text-muted: #595959;
     --color-text-inverse: #FFFCF9;
     --color-text-inverse-muted: #FFF5E9;
 
-    /* Accent */
     --color-accent-sub: #359000;
 
 
@@ -41,8 +38,7 @@
     --font-weight-light: 300;
     --font-weight-thin: 100;
 
-
-
+    /* Space */
     --space-1: 0.4rem;
     --space-2: 0.8rem;
     --space-3: 1.2rem;
@@ -50,6 +46,15 @@
     --space-5: 2.4rem;
     --space-6: 3.2rem;
     --space-7: 4.8rem;
+
+
+
+    /* Border-radious */
+    --border-radious-s: 4px;
+    --border-radious-m: 8px;
+    --border-radious-l: 16px;
+    --border-radious-xl: 32px;
+    --border-radious-full: 999px;
 
 
 

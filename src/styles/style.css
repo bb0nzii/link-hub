@@ -65,18 +65,15 @@ a {
 }
 
 :root {
-  /* Brand */
+  /* Color */
   --color-brand-primary: #035900;
   --color-brand-primary-rgb: 3, 89, 0;
-  /* Background */
   --color-bg-base: #FFFCF9;
   --color-bg-section: #FFF5E9;
-  /* Text */
   --color-text-primary: #030509;
   --color-text-muted: #595959;
   --color-text-inverse: #FFFCF9;
   --color-text-inverse-muted: #FFF5E9;
-  /* Accent */
   --color-accent-sub: #359000;
   /* Font size */
   --font-size-2xl: 3rem; /* page title */
@@ -98,6 +95,7 @@ a {
   --font-weight-regular: 400;
   --font-weight-light: 300;
   --font-weight-thin: 100;
+  /* Space */
   --space-1: 0.4rem;
   --space-2: 0.8rem;
   --space-3: 1.2rem;
@@ -105,6 +103,12 @@ a {
   --space-5: 2.4rem;
   --space-6: 3.2rem;
   --space-7: 4.8rem;
+  /* Border-radious */
+  --border-radious-s: 4px;
+  --border-radious-m: 8px;
+  --border-radious-l: 16px;
+  --border-radious-xl: 32px;
+  --border-radious-full: 999px;
   --container-width: 600px;
 }
 
@@ -139,11 +143,6 @@ a {
     --space-7: 3rem;
   }
 }
-.page {
-  position: relative;
-  padding-top: var(--space-8);
-}
-
 .linkhub {
   min-height: 100vh;
   background: var(--color-brand-primary);
@@ -155,25 +154,152 @@ a {
 .linkhub__container {
   width: 100%;
   max-width: var(--container-width);
+  padding-top: var(--space-7);
 }
 
 .linkhub__card {
   background: var(--color-bg-base);
-  border-radius: 32px 32px 0 0;
+  border-radius: var(--border-radious-xl) var(--border-radious-xl) 0 0;
+  display: grid;
+  flex-direction: column;
+  gap: var(--space-7);
   overflow: hidden;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------------- guestbook ---------------- */
+.linkhub__guestbook {
+  padding: var(--space-6);
+  text-align: center;
+}
+
+/* ---------------- mobile ---------------- */
+@media (max-width: 768px) {
+  .linkhub__card {
+    min-height: 100vh;
+  }
+}
+/* ---------------- links ---------------- */
+.linkhub__links {
+  padding: var(--space-5);
+  background: var(--color-bg-section);
+  display: grid;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.link-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-bg-base);
+  color: var(--color-text-base);
+  border-radius: var(--border-radious-full);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  transition: 0.2s;
+}
+
+.link-item:hover {
+  transform: translateY(-3px);
+}
+
+.link-item__icon {
+  width: 48px;
+  height: 48px;
+  background: var(--color-brand-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* ---------------- tabs ---------------- */
+.linkhub__tabs {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.tab-btn {
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--border-radious-full);
+  background: var(--color-bg-base);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  transition: 0.2s;
+}
+
+.tab-btn.active {
+  background: var(--color-brand-primary);
+  color: var(--color-text-inverse);
+}
+
+.guestbook__form {
+  border-radius: 0;
+  box-shadow: none;
+  padding: var(--space-4);
+}
+
+.form-row {
+  margin-bottom: var(--space-2);
+}
+
+.form-button {
+  height: 100%;
+  box-shadow: none;
+  background-color: var(--color-brand-primary);
+  color: var(--color-text-inverse);
+}
+
+.guestbook__title {
+  margin-bottom: var(--space-1);
+  font-size: 1.6rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.guestbook__caption {
+  margin-bottom: var(--space-2);
+}
+
+.guestbook__content {
+  white-space: pre-line;
+}
+
+.guestbook__list {
+  padding: var(--space-4);
+  background-color: var(--color-bg-section);
+  display: grid;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.guestbook__item {
+  padding: var(--space-3);
+  border-radius: var(--border-radious-m);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* ---------------- header ---------------- */
 .linkhub__header {
   text-align: center;
-  padding: var(--space-7) var(--space-6);
+}
+
+.bbonzi-logo {
+  width: 120px;
+  margin: 0 auto var(--space-3);
+  padding: var(--space-3) 0 var(--space-7);
+}
+.bbonzi-logo img {
+  width: 100%;
 }
 
 .logo {
-  width: 120px;
-  margin: 0 auto var(--space-5);
+  width: 240px;
+  margin: 0 auto var(--space-4);
 }
-
 .logo img {
   width: 100%;
 }
@@ -183,65 +309,12 @@ a {
   color: var(--color-text-muted);
 }
 
-/* ---------------- tabs ---------------- */
-.linkhub__tabs {
-  display: flex;
-  justify-content: center;
-  gap: var(--space-2);
-  margin-bottom: var(--space-6);
+/* ---------------- mobile ---------------- */
+@media (max-width: 768px) {
+  .logo {
+    width: 200px;
+  }
 }
-
-.tab-btn {
-  padding: var(--space-2) var(--space-5);
-  border-radius: 40px;
-  background: white;
-  font-size: var(--font-size-md);
-  transition: 0.2s;
-}
-
-.tab-btn.active {
-  background: var(--color-brand-primary);
-  color: white;
-}
-
-/* ---------------- links ---------------- */
-.linkhub__links {
-  padding: var(--space-6);
-  background: var(--color-bg-section);
-}
-
-.link-item {
-  display: flex;
-  align-items: center;
-  gap: var(--space-4);
-  padding: var(--space-4);
-  margin-bottom: var(--space-4);
-  background: white;
-  border-radius: 40px;
-  transition: 0.2s;
-}
-
-.link-item:hover {
-  transform: translateY(-3px);
-}
-
-.link-item__icon {
-  width: 40px;
-  height: 40px;
-  background: var(--color-brand-primary);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-
-/* ---------------- guestbook ---------------- */
-.linkhub__guestbook {
-  padding: var(--space-6);
-  text-align: center;
-}
-
 /* ---------------- footer ---------------- */
 .linkhub__footer {
   text-align: center;
@@ -250,15 +323,4 @@ a {
 
 .copyright {
   margin-top: var(--space-3);
-}
-
-/* ---------------- mobile ---------------- */
-@media (max-width: 768px) {
-  .linkhub {
-    background: none;
-  }
-  .linkhub__card {
-    border-radius: 0;
-    min-height: 100vh;
-  }
 }/*# sourceMappingURL=style.css.map */

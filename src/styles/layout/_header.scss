@@ -1,0 +1,41 @@
+/* ---------------- header ---------------- */
+
+.linkhub__header {
+  text-align: center;
+}
+
+.bbonzi-logo {
+  width: 120px;
+  margin: 0 auto var(--space-3);
+  padding: var(--space-3) 0 var(--space-7);
+
+  img {
+    width: 100%;
+  }
+}
+
+.logo {
+  width: 240px;
+  margin: 0 auto var(--space-4);
+
+  img {
+    width: 100%;
+  }
+}
+
+.description {
+  margin-top: var(--space-4);
+  color: var(--color-text-muted);
+}
+
+
+
+/* ---------------- mobile ---------------- */
+
+@media (max-width:768px) {
+
+  .logo {
+    width: 200px;
+  }
+  
+}

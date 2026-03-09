@@ -1,0 +1,111 @@
+<script setup>
+
+import { ref } from "vue"
+
+const emit = defineEmits(["submit"])
+
+const author = ref("")
+const title = ref("")
+const content = ref("")
+
+const submit = () => {
+
+  if(!author.value || !title.value || !content.value){
+    alert("모든 항목을 입력하세요")
+    return
+  }
+
+  emit("submit",{
+    author: author.value,
+    title: title.value,
+    content: content.value
+  })
+
+  author.value=""
+  title.value=""
+  content.value=""
+}
+
+</script>
+
+
+
+<template>
+
+<v-card class="guestbook__form">
+
+  <v-row no-gutters class="form-row">
+
+    <v-col cols="4">
+      <v-text-field
+        label="작성자"
+        variant="outlined"
+        density="comfortable"
+        v-model="author"
+      />
+    </v-col>
+
+    <v-col cols="6">
+      <v-text-field
+        label="제목"
+        variant="outlined"
+        density="comfortable"
+        v-model="title"
+      />
+    </v-col>
+
+    <v-col cols="2">
+      <v-btn
+        block
+        @click="submit"
+        class="form-button"
+      >
+        등록
+      </v-btn>
+    </v-col>
+
+  </v-row>
+
+
+  <v-textarea
+    label="방명록 작성 시 수정 및 삭제할 수 없습니다. 등록하기 전에 꼬옥 확인하기 >.0"
+    variant="outlined"
+    v-model="content"
+    rows="4"
+    auto-grow
+  />
+
+</v-card>
+
+</template>
+
+
+
+<style scoped>
+
+:deep(.v-col){
+  display:flex;
+  align-items:center;
+}
+
+:deep(.v-field){
+  overflow: visible;
+}
+
+:deep(.v-field){
+  border-radius: var(-border-radious-s);
+}
+
+:deep(.v-field__input){
+    padding: var(--space-2);
+}
+
+:deep(.v-field-label){
+  padding: 0 var(--space-2);
+}
+
+:deep(.v-input__details){
+  display:none;
+}
+
+</style>
