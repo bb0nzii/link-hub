@@ -108,4 +108,8 @@ const submit = () => {
   display:none;
 }
 
+@media screen and (max-width: 430px) {
+    
+}
+
 </style>
