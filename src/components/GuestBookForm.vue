@@ -68,7 +68,8 @@ const submit = () => {
 
 
   <v-textarea
-    label="방명록 등록 시 수정 및 삭제는 저만 할 수 있어요. 등록 전 꼬옥 확인하기 >.0"
+    label="방명록 등록 시 수정 및 삭제는 저만 할 수 있어요.
+           등록 전 꼬옥 확인해주기!!"
     variant="outlined"
     v-model="content"
     rows="4"
@@ -89,10 +90,6 @@ const submit = () => {
 }
 
 :deep(.v-field){
-  overflow: visible;
-}
-
-:deep(.v-field){
   border-radius: var(-border-radious-s);
 }
 
@@ -103,6 +100,7 @@ const submit = () => {
 :deep(.v-field-label){
   padding: 0 var(--space-2);
   font-size: var(--font-size-sm);
+  white-space: pre-line;
 }
 
 :deep(.v-input__details){

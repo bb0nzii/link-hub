@@ -256,6 +256,7 @@ a {
 .guestbook__form {
   border-radius: 0;
   box-shadow: none;
+  overflow: visible;
   padding: 0 var(--space-4) var(--space-4) var(--space-4);
 }
 
