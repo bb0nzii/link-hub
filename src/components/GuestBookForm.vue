@@ -102,7 +102,7 @@ const submit = () => {
 
 :deep(.v-field-label){
   padding: 0 var(--space-2);
-  font-size: var(--font-size-xsm);
+  font-size: var(--font-size-sm);
 }
 
 :deep(.v-input__details){
@@ -110,7 +110,9 @@ const submit = () => {
 }
 
 @media screen and (max-width: 430px) {
-    
+    :deep(.v-field-label){
+      font-size: var(--font-size-xsm);
+    }
 }
 
 </style>
