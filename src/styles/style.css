@@ -191,7 +191,6 @@ a {
     border-radius: 0;
   }
 }
-/* ---------------- links ---------------- */
 .linkhub__links {
   padding: var(--space-5) var(--space-4);
   background: var(--color-bg-section);
@@ -227,6 +226,12 @@ a {
   color: #fff;
 }
 
+@media screen and (max-width: 430px) {
+  .link-item__icon {
+    width: 40px;
+    height: 40px;
+  }
+}
 /* ---------------- tabs ---------------- */
 .linkhub__tabs {
   display: flex;
@@ -299,7 +304,6 @@ a {
     font-size: 1.15rem;
   }
 }
-/* ---------------- header ---------------- */
 .linkhub__header {
   text-align: center;
 }
@@ -332,8 +336,19 @@ a {
     width: 200px;
   }
 }
+@media (max-width: 430px) {
+  .bbonzi-logo {
+    width: 100px;
+    margin: 0 auto var(--space-1);
+  }
+  .logo {
+    width: 160px;
+  }
+}
 /* ---------------- footer ---------------- */
 .linkhub__footer {
+  background-color: var(--color-brand-primary);
+  color: var(--color-text-inverse);
   text-align: center;
   padding: var(--space-6) var(--space-6);
 }
