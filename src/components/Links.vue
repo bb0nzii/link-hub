@@ -24,9 +24,14 @@ const links = [
     url: "https://www.instagram.com/poplar159/"
   },
   {
-    name: "Blog 바로가기",
+    name: "Blog 바로가기(1)",
     icon: "mdi-post-outline",
     url: "https://blog.naver.com/poplar159"
+  },
+  {
+    name: "Blog 바로가기(2)",
+    icon: "mdi-post-outline",
+    url: "https://blog.naver.com/ncu10086"
   }
 ]
 
