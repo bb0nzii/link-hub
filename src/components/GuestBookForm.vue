@@ -40,7 +40,7 @@ const submit = () => {
       <v-text-field
         label="작성자"
         variant="outlined"
-        density="comfortable"
+        density="compact"
         v-model="author"
       />
     </v-col>
@@ -49,7 +49,7 @@ const submit = () => {
       <v-text-field
         label="제목"
         variant="outlined"
-        density="comfortable"
+        density="compact"
         v-model="title"
       />
     </v-col>
@@ -102,6 +102,7 @@ const submit = () => {
 
 :deep(.v-field-label){
   padding: 0 var(--space-2);
+  font-size: var(--font-size-xsm);
 }
 
 :deep(.v-input__details){
